@@ -23,16 +23,17 @@ module.exports = {
         'plugin:prettier/recommended',
         'plugin:cypress/recommended',
         'plugin:jest-formatting/recommended',
-        'plugin:lodash/recommended',
-        'plugin:lodash/v3',
+
         'plugin:security/recommended',
         'plugin:jest-dom/recommended',
         'plugin:markdown/recommended',
         'plugin:jsx-a11y/recommended',
         'plugin:node/recommended',
         'plugin:react-redux/recommended',
-        'plugin:you-dont-need-lodash-underscore/compatible',
         'prettier',
+        // 'plugin:you-dont-need-lodash-underscore/compatible',
+        // 'plugin:lodash/recommended',
+        // 'plugin:lodash/v3',
     ],
     plugins: [
         'react',
@@ -46,18 +47,18 @@ module.exports = {
         'jest-formatting',
         'optimize-regex',
         'security',
-        'lodash',
         'no-constructor-bind',
         'sql',
         'jest-dom',
         'disable',
         'jsx-a11y',
-        'jsdoc',
-        // 'react-native',
         'graphql',
         'react-redux',
         'eslint-plugin-no-cyrillic-string',
-        // "optimize-regex/all" // without the blacklist
+        // "optimize-regex/all",
+        // 'react-native',
+        // 'jsdoc',
+        // 'lodash',
     ],
 
     //  "parser": "@typescript-eslint/parser",
@@ -76,7 +77,7 @@ module.exports = {
             'error',
             { exceptMethods: ['render', 'componentDidCatch'] },
         ],
-        'lodash/prefer-lodash-method': 0,
+        // 'lodash/prefer-lodash-method': 0,
         'react-hooks/rules-of-hooks': 2,
         'react-hooks/exhaustive-deps': 1,
         'react/prop-types': 0,
@@ -239,47 +240,6 @@ module.exports = {
                 allowLiteral: false,
             },
         ],
-        'jsdoc/check-access': 1, // Recommended
-        'jsdoc/check-alignment': 1, // Recommended
-        'jsdoc/check-examples': 0,
-        'jsdoc/check-indentation': 1,
-        'jsdoc/check-line-alignment': 1,
-        'jsdoc/check-param-names': 1, // Recommended
-        'jsdoc/check-property-names': 1, // Recommended
-        'jsdoc/check-syntax': 1,
-        'jsdoc/check-tag-names': 1, // Recommended
-        'jsdoc/check-types': 1, // Recommended
-        'jsdoc/check-values': 1, // Recommended
-        'jsdoc/empty-tags': 1, // Recommended
-        'jsdoc/implements-on-classes': 1, // Recommended
-        'jsdoc/match-description': 1,
-        'jsdoc/newline-after-description': 1, // Recommended
-        'jsdoc/no-bad-blocks': 1,
-        'jsdoc/no-defaults': 1,
-        'jsdoc/no-types': 1,
-        'jsdoc/no-undefined-types': 1, // Recommended
-        'jsdoc/require-description': 0,
-        'jsdoc/require-description-complete-sentence': 1,
-        'jsdoc/require-example': 0,
-        'jsdoc/require-file-overview': 0,
-        'jsdoc/require-hyphen-before-param-description': 1,
-        'jsdoc/require-jsdoc': 1, // Recommended
-        'jsdoc/require-param': 1, // Recommended
-        'jsdoc/require-param-description': 1, // Recommended
-        'jsdoc/require-param-name': 1, // Recommended
-        'jsdoc/require-param-type': 1, // Recommended
-        'jsdoc/require-property': 1, // Recommended
-        'jsdoc/require-property-description': 1, // Recommended
-        'jsdoc/require-property-name': 1, // Recommended
-        'jsdoc/require-property-type': 1, // Recommended
-        'jsdoc/require-returns': 1, // Recommended
-        'jsdoc/require-returns-check': 1, // Recommended
-        'jsdoc/require-returns-description': 1, // Recommended
-        'jsdoc/require-returns-type': 1, // Recommended
-        'jsdoc/require-throws': 1,
-        'jsdoc/require-yields': 1, // Recommended
-        'jsdoc/require-yields-check': 1, // Recommended
-        'jsdoc/valid-types': 1, // Recommended
         'node/exports-style': ['error', 'module.exports'],
         'node/file-extension-in-import': ['error', 'always'],
         'node/prefer-global/buffer': ['error', 'always'],
@@ -294,7 +254,47 @@ module.exports = {
         'node/file-extension-in-import': 0,
         'node/no-extraneous-require': 0,
         'import/prefer-default-export': 0,
-
+        // 'jsdoc/check-access': 1, // Recommended
+        // 'jsdoc/check-alignment': 1, // Recommended
+        // 'jsdoc/check-examples': 0,
+        // 'jsdoc/check-indentation': 1,
+        // 'jsdoc/check-line-alignment': 1,
+        // 'jsdoc/check-param-names': 1, // Recommended
+        // 'jsdoc/check-property-names': 1, // Recommended
+        // 'jsdoc/check-syntax': 1,
+        // 'jsdoc/check-tag-names': 1, // Recommended
+        // 'jsdoc/check-types': 1, // Recommended
+        // 'jsdoc/check-values': 1, // Recommended
+        // 'jsdoc/empty-tags': 1, // Recommended
+        // 'jsdoc/implements-on-classes': 1, // Recommended
+        // 'jsdoc/match-description': 1,
+        // 'jsdoc/newline-after-description': 1, // Recommended
+        // 'jsdoc/no-bad-blocks': 1,
+        // 'jsdoc/no-defaults': 1,
+        // 'jsdoc/no-types': 1,
+        // 'jsdoc/no-undefined-types': 1, // Recommended
+        // 'jsdoc/require-description': 0,
+        // 'jsdoc/require-description-complete-sentence': 1,
+        // 'jsdoc/require-example': 0,
+        // 'jsdoc/require-file-overview': 0,
+        // 'jsdoc/require-hyphen-before-param-description': 1,
+        // 'jsdoc/require-jsdoc': 1, // Recommended
+        // 'jsdoc/require-param': 1, // Recommended
+        // 'jsdoc/require-param-description': 1, // Recommended
+        // 'jsdoc/require-param-name': 1, // Recommended
+        // 'jsdoc/require-param-type': 1, // Recommended
+        // 'jsdoc/require-property': 1, // Recommended
+        // 'jsdoc/require-property-description': 1, // Recommended
+        // 'jsdoc/require-property-name': 1, // Recommended
+        // 'jsdoc/require-property-type': 1, // Recommended
+        // 'jsdoc/require-returns': 1, // Recommended
+        // 'jsdoc/require-returns-check': 1, // Recommended
+        // 'jsdoc/require-returns-description': 1, // Recommended
+        // 'jsdoc/require-returns-type': 1, // Recommended
+        // 'jsdoc/require-throws': 1,
+        // 'jsdoc/require-yields': 1, // Recommended
+        // 'jsdoc/require-yields-check': 1, // Recommended
+        // 'jsdoc/valid-types': 1, // Recommended
         // 'react-native/no-unused-styles': 2,
         // 'react-native/split-platform-components': 2,
         // 'react-native/no-inline-styles': 2,
