@@ -60,10 +60,11 @@
         ]
     },
     "scripts": {
+        "dev": "concurrently \"cross-env NODE_ENV=development webpack --watch --mode development --color --hot\" \"parcel src/public/index.html\"",
         "serve": "NODE_ENV=development  webpack serve --liveReload --host 127.0.0.1 --port 3000 --color --progress",
         "start": "webpack  --mode development --watch",
         "build": "NODE_ENV=production webpack",
-        "dev": "cross-env NODE_ENV=development webpack --watch --mode development --color --progress --hot",
+        "dev:webpack": "cross-env NODE_ENV=development webpack --watch --mode development --color --progress --hot",
         "dev:parcel": "parcel src/public/index.html",
         "release": "standard-version",
         "prettier": "prettier \"src/**/*.{js,ts,tsx,ts,html,svelte,vue}\" --write",

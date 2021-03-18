@@ -32,6 +32,7 @@ module.exports = {
         'plugin:node/recommended',
         'plugin:react-redux/recommended',
         'plugin:you-dont-need-lodash-underscore/compatible',
+        'prettier',
     ],
     plugins: [
         'react',
@@ -68,6 +69,7 @@ module.exports = {
         },
     },
     rules: {
+        'react/prop-types': 0,
         'prettier/prettier': 'off',
         'prefer-destructuring': 'off',
         'no-cyrillic-string/no-cyrillic-string': 'error',
@@ -102,22 +104,17 @@ module.exports = {
         'import/no-extraneous-dependencies': [
             'error',
             {
-                optionalDependencies: [
-                    'test/unit/index.js',
-                ],
+                optionalDependencies: ['test/unit/index.js'],
             },
         ],
         // 'import/no-extraneous-dependencies':   0,
-        'no-unused-expressions': [
-            'error',
-            { allowTernary: true },
-        ],
+        'no-unused-expressions': ['error', { allowTernary: true }],
         'comma-dangle': 0,
         'object-curly-newline': 0,
         'no-unused-vars': 0,
         'no-useless-escape': 0,
         'guard-for-in': 1,
-        'no-console': 0, // process.env.NODE_ENV ===
+        'no-console': 1, // process.env.NODE_ENV ===
         // 'production' ? 'error' : 'off',
         'no-debugger': 0, // process.env.NODE_ENV ===
         // 'production' ? 'error' : 'off',
@@ -274,17 +271,11 @@ module.exports = {
         'jsdoc/require-yields-check': 1, // Recommended
         'jsdoc/valid-types': 1, // Recommended
         'node/exports-style': ['error', 'module.exports'],
-        'node/file-extension-in-import': [
-            'error',
-            'always',
-        ],
+        'node/file-extension-in-import': ['error', 'always'],
         'node/prefer-global/buffer': ['error', 'always'],
         'node/prefer-global/console': ['error', 'always'],
         'node/prefer-global/process': ['error', 'always'],
-        'node/prefer-global/url-search-params': [
-            'error',
-            'always',
-        ],
+        'node/prefer-global/url-search-params': ['error', 'always'],
         'node/prefer-global/url': ['error', 'always'],
         'node/prefer-promises/dns': 'error',
         'node/prefer-promises/fs': 'error',
@@ -324,8 +315,7 @@ module.exports = {
         'html/html-extensions': ['.html', '.we'],
         'html/xml-extensions': ['.html'],
 
-        'html/javascript-mime-types':
-            '/^text\\/(javascript|jsx)$/',
+        'html/javascript-mime-types': '/^text\\/(javascript|jsx)$/',
         //    "html/indent": "0",
         //    // code should start at the beginning of the line
         //    (no initial indentation).
@@ -387,26 +377,17 @@ module.exports = {
                 sourceType: 'module',
                 project: './tsconfig.json',
             },
-            plugins: [
-                'react',
-                '@typescript-eslint',
-                'eslint-plugin-tsdoc',
-            ],
+            plugins: ['react', '@typescript-eslint', 'eslint-plugin-tsdoc'],
             rules: {
                 'import/prefer-default-export': 'off',
                 'tsdoc/syntax': 'warn',
                 indent: 'off',
                 '@typescript-eslint/indent': ['off'],
                 '@typescript-eslint/dot-notation': ['off'],
-                '@typescript-eslint/ban-ts-comment': [
-                    'off',
-                ],
+                '@typescript-eslint/ban-ts-comment': ['off'],
                 'linebreak-style': ['error', 'unix'],
                 quotes: ['error', 'single'],
-                'comma-dangle': [
-                    'error',
-                    'always-multiline',
-                ],
+                'comma-dangle': ['error', 'always-multiline'],
                 '@typescript-eslint/no-explicit-any': 0,
                 'no-undef': 2,
                 'no-unused-vars': 2,
@@ -453,10 +434,7 @@ module.exports = {
                 'vue/html-self-closing': 'off',
                 indent: 'off',
                 quotes: ['error', 'single'],
-                'comma-dangle': [
-                    'error',
-                    'always-multiline',
-                ],
+                'comma-dangle': ['error', 'always-multiline'],
                 'no-undef': 2,
                 'no-unused-vars': 2,
                 'no-useless-escape': 0,
@@ -480,8 +458,7 @@ module.exports = {
                 // add the TypeScript plugin
             ],
             settings: {
-                'svelte3/typescript':
-                    "require('typescript')",
+                'svelte3/typescript': "require('typescript')",
                 // pass the TypeScript package to the Sve lte plugin
                 // ...
             },
