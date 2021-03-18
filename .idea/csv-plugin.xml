@@ -101,6 +101,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/src/SearchParams.js">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/src/analytics.ts">
           <value>
             <Attribute>

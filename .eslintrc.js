@@ -36,6 +36,7 @@ module.exports = {
     ],
     plugins: [
         'react',
+        'react-hooks',
         'import',
         'html',
         'css-modules',
@@ -69,6 +70,15 @@ module.exports = {
         },
     },
     rules: {
+        'no-shadow': 1,
+        // 'react/state-in-constructor': ['error', 'always'],
+        'class-methods-use-this': [
+            'error',
+            { exceptMethods: ['render', 'componentDidCatch'] },
+        ],
+        'lodash/prefer-lodash-method': 0,
+        'react-hooks/rules-of-hooks': 2,
+        'react-hooks/exhaustive-deps': 1,
         'react/prop-types': 0,
         'prettier/prettier': 'off',
         'prefer-destructuring': 'off',
@@ -104,7 +114,7 @@ module.exports = {
         'import/no-extraneous-dependencies': [
             'error',
             {
-                optionalDependencies: ['test/unit/index.js'],
+                optionalDependencies: ['test/unit/index.jsx'],
             },
         ],
         // 'import/no-extraneous-dependencies':   0,
@@ -114,7 +124,7 @@ module.exports = {
         'no-unused-vars': 0,
         'no-useless-escape': 0,
         'guard-for-in': 1,
-        'no-console': 1, // process.env.NODE_ENV ===
+        'no-console': 0, // process.env.NODE_ENV ===
         // 'production' ? 'error' : 'off',
         'no-debugger': 0, // process.env.NODE_ENV ===
         // 'production' ? 'error' : 'off',
@@ -231,7 +241,7 @@ module.exports = {
         ],
         'jsdoc/check-access': 1, // Recommended
         'jsdoc/check-alignment': 1, // Recommended
-        'jsdoc/check-examples': 1,
+        'jsdoc/check-examples': 0,
         'jsdoc/check-indentation': 1,
         'jsdoc/check-line-alignment': 1,
         'jsdoc/check-param-names': 1, // Recommended
@@ -248,10 +258,10 @@ module.exports = {
         'jsdoc/no-defaults': 1,
         'jsdoc/no-types': 1,
         'jsdoc/no-undefined-types': 1, // Recommended
-        'jsdoc/require-description': 1,
+        'jsdoc/require-description': 0,
         'jsdoc/require-description-complete-sentence': 1,
-        'jsdoc/require-example': 1,
-        'jsdoc/require-file-overview': 1,
+        'jsdoc/require-example': 0,
+        'jsdoc/require-file-overview': 0,
         'jsdoc/require-hyphen-before-param-description': 1,
         'jsdoc/require-jsdoc': 1, // Recommended
         'jsdoc/require-param': 1, // Recommended

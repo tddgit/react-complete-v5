@@ -5,7 +5,7 @@ module.exports = {
     src: path.resolve(__dirname, './src'),
 
     // Entry points
-    entry: './index.js',
+    entry: './index.jsx',
 
     // Production build files
     build: path.resolve(__dirname, './dist'),

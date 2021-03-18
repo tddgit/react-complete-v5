@@ -23,6 +23,9 @@ const plugins = [
     '@babel/plugin-proposal-class-static-block',
 
     '@babel/plugin-transform-runtime',
+    'inline-dotenv',
+    'dynamic-import-node',
+    'transform-export-extensions',
 ];
 const isDevelopment = process.env.NODE_ENV !== 'production';
 

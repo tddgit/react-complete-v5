@@ -68,7 +68,10 @@ const plugins = [
     new MiniCssExtractPlugin({
         filename: filename('css'),
     }),
-    new ESLintPlugin(),
+    new ESLintPlugin({
+        extensions: ['.js', '.json', '.jsx', '.ts', '.tsx', 'vue', 'svelte'],
+        fix: true,
+    }),
 
     new webpack.ContextReplacementPlugin(
         /angular(\\|\/)core/,
@@ -321,7 +324,7 @@ module.exports = {
 // new NodemonPlugin({
 //     // If using more than one entry, you can specify
 //     // which output file will be restarted.
-//     script: './src/index.js',
+//     script: './src/index.jsx',
 //
 //     // What to watch.
 //     watch: path.resolve(__dirname, './src'),

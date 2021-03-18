@@ -1,6 +1,7 @@
 import React from 'react';
-import Pet from './Pet';
-import SearchParams from './SearchParams';
+import { Router, Link } from '@reach/router';
+import SearchParams from './SearchParams.jsx';
+import DetailsWithErrorBoundary from './DetailsWithErrorBoundary.jsx';
 
 // eslint-disable-next-line react/prop-types
 const App = () => {
@@ -29,10 +30,18 @@ const App = () => {
         //     <Pet name={'Pepper'} animal={'Bird'} breed={'Havanese'} />
         //     <Pet name={'Depper'} animal={'Cat'} breed={'Havanese'} />
         // </div>
-        <div>
-            <h1 id={'something-important'}>Adopt me</h1>
-            <SearchParams />
-        </div>
+        <React.StrictMode>
+            <div>
+                <header>
+                    <Link to={'/'}>Adopt me</Link>
+                </header>
+
+                <Router>
+                    <SearchParams path={'/'} />
+                    <DetailsWithErrorBoundary path={'details/:id'} />
+                </Router>
+            </div>
+        </React.StrictMode>
     );
 };
 
