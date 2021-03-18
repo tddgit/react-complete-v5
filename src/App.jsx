@@ -3,7 +3,10 @@ import { Router, Link } from '@reach/router';
 import SearchParams from './SearchParams.jsx';
 import DetailsWithErrorBoundary from './DetailsWithErrorBoundary.jsx';
 
-// eslint-disable-next-line react/prop-types
+const Page = () => {
+    return <h1>PAGE</h1>;
+};
+
 const App = () => {
     // return React.createElement('div', { id: 'something-important' }, [
     //     React.createElement('h1', {}, 'Adopt me'),
@@ -23,6 +26,7 @@ const App = () => {
     //         breed: 'Havanese',
     //     }),
     // ]);
+
     return (
         // <div>
         //     <h1 id={'something important'}>Adopt me</h1>
@@ -33,12 +37,14 @@ const App = () => {
         <React.StrictMode>
             <div>
                 <header>
-                    <Link to={'/'}>Adopt me</Link>
+                    <Link to="/">Adopt me</Link>
+                    {/* <Link to={'/details'}>Details</Link> */}
                 </header>
 
                 <Router>
-                    <SearchParams path={'/'} />
-                    <DetailsWithErrorBoundary path={'details/:id'} />
+                    <SearchParams path="/" />
+                    {/* <Page path="details" /> */}
+                    <DetailsWithErrorBoundary path="/details/:id" />
                 </Router>
             </div>
         </React.StrictMode>

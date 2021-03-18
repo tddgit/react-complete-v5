@@ -6,6 +6,7 @@ git config --global user.name "Stas"
 *.less
 **/docs/
 **/dist/
+**/test/
 **/custom-template
 /node_modules/
 /public/build/

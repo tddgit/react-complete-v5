@@ -12,6 +12,11 @@ import ErrorBoundary from './ErrorBoundary.jsx';
 // };
 
 class Details extends React.Component {
+    constructor(props) {
+        super(props);
+        this.props = props;
+    }
+
     state = {
         loading: true,
         name: '',
